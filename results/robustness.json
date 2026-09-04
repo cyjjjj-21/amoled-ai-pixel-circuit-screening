@@ -1,0 +1,314 @@
+{
+  "scenarios": {
+    "baseline": {},
+    "switch_2x_slower": {
+      "G_ON": 1e-05
+    },
+    "switch_2x_faster": {
+      "G_ON": 4e-05
+    },
+    "parasitic_2x": {
+      "C_PAR": 4e-15,
+      "C_GS": 6e-15
+    },
+    "parasitic_half": {
+      "C_PAR": 1e-15,
+      "C_GS": 1.5e-15
+    },
+    "c1_minus10_c2_plus10": {
+      "C1": 3.6e-14,
+      "C2": 4.4e-14
+    },
+    "c1_plus10_c2_minus10": {
+      "C1": 4.4e-14,
+      "C2": 3.6e-14
+    },
+    "mobility_minus20": {
+      "BETA": 1.8048000000000004e-08
+    },
+    "mobility_plus20": {
+      "BETA": 2.7072e-08
+    }
+  },
+  "baseline_top10": [
+    "PX-7A2E8337+TM-C6470215",
+    "PX-7A2E8337+TM-25F81A19",
+    "PX-7A2E8337+TM-D2B82E1A",
+    "PX-7A2E8337+TM-D9325021",
+    "PX-7A2E8337+TM-AB4A116E",
+    "PX-7A2E8337+TM-CEB21E95",
+    "PX-7A2E8337+TM-C3BA9D91",
+    "PX-7A2E8337+TM-63DEB74E",
+    "PX-7A2E8337+TM-3A6C19DC",
+    "PX-7A2E8337+TM-348A77C8"
+  ],
+  "audit": {
+    "baseline": {
+      "functional_combinations": 120,
+      "winner": {
+        "candidate_id": "PX-7A2E8337+TM-C6470215",
+        "topology_id": "PX-7A2E8337",
+        "functional": true,
+        "score": 79.80688502494874,
+        "max_rcer_pct": 13.345967945772175,
+        "address_us": 17.1
+      },
+      "winner_topology": "PX-7A2E8337",
+      "top20_topology_counts": {
+        "PX-7A2E8337": 20
+      },
+      "baseline_top10_retained_in_top20": 10,
+      "baseline_top10_median_rank": 5.5
+    },
+    "switch_2x_slower": {
+      "functional_combinations": 120,
+      "winner": {
+        "candidate_id": "PX-7A2E8337+TM-C6470215",
+        "topology_id": "PX-7A2E8337",
+        "functional": true,
+        "score": 79.8486223585065,
+        "max_rcer_pct": 13.254117858903111,
+        "address_us": 17.1
+      },
+      "winner_topology": "PX-7A2E8337",
+      "top20_topology_counts": {
+        "PX-7A2E8337": 20
+      },
+      "baseline_top10_retained_in_top20": 10,
+      "baseline_top10_median_rank": 5.5
+    },
+    "switch_2x_faster": {
+      "functional_combinations": 120,
+      "winner": {
+        "candidate_id": "PX-7A2E8337+TM-C6470215",
+        "topology_id": "PX-7A2E8337",
+        "functional": true,
+        "score": 79.7854694170208,
+        "max_rcer_pct": 13.39289003293247,
+        "address_us": 17.1
+      },
+      "winner_topology": "PX-7A2E8337",
+      "top20_topology_counts": {
+        "PX-7A2E8337": 20
+      },
+      "baseline_top10_retained_in_top20": 10,
+      "baseline_top10_median_rank": 5.5
+    },
+    "parasitic_2x": {
+      "functional_combinations": 348,
+      "winner": {
+        "candidate_id": "PX-7A2E8337+TM-BDA8A9EE",
+        "topology_id": "PX-7A2E8337",
+        "functional": true,
+        "score": 77.56887045554858,
+        "max_rcer_pct": 14.763264590966852,
+        "address_us": 9.15
+      },
+      "winner_topology": "PX-7A2E8337",
+      "top20_topology_counts": {
+        "PX-7A2E8337": 20
+      },
+      "baseline_top10_retained_in_top20": 6,
+      "baseline_top10_median_rank": 19.0
+    },
+    "parasitic_half": {
+      "functional_combinations": 168,
+      "winner": {
+        "candidate_id": "PX-7A2E8337+TM-C6470215",
+        "topology_id": "PX-7A2E8337",
+        "functional": true,
+        "score": 81.90887778063089,
+        "max_rcer_pct": 12.220022983618401,
+        "address_us": 17.1
+      },
+      "winner_topology": "PX-7A2E8337",
+      "top20_topology_counts": {
+        "PX-7A2E8337": 20
+      },
+      "baseline_top10_retained_in_top20": 10,
+      "baseline_top10_median_rank": 5.5
+    },
+    "c1_minus10_c2_plus10": {
+      "functional_combinations": 120,
+      "winner": {
+        "candidate_id": "PX-7A2E8337+TM-BDA8A9EE",
+        "topology_id": "PX-7A2E8337",
+        "functional": true,
+        "score": 79.1949139123133,
+        "max_rcer_pct": 14.807168039496393,
+        "address_us": 9.15
+      },
+      "winner_topology": "PX-7A2E8337",
+      "top20_topology_counts": {
+        "PX-7A2E8337": 20
+      },
+      "baseline_top10_retained_in_top20": 4,
+      "baseline_top10_median_rank": 21.5
+    },
+    "c1_plus10_c2_minus10": {
+      "functional_combinations": 158,
+      "winner": {
+        "candidate_id": "PX-7A2E8337+TM-C6470215",
+        "topology_id": "PX-7A2E8337",
+        "functional": true,
+        "score": 80.80423519708266,
+        "max_rcer_pct": 12.00518461298798,
+        "address_us": 17.1
+      },
+      "winner_topology": "PX-7A2E8337",
+      "top20_topology_counts": {
+        "PX-7A2E8337": 20
+      },
+      "baseline_top10_retained_in_top20": 10,
+      "baseline_top10_median_rank": 5.5
+    },
+    "mobility_minus20": {
+      "functional_combinations": 120,
+      "winner": {
+        "candidate_id": "PX-7A2E8337+TM-C6470215",
+        "topology_id": "PX-7A2E8337",
+        "functional": true,
+        "score": 79.63696997192416,
+        "max_rcer_pct": 13.308719057657683,
+        "address_us": 17.1
+      },
+      "winner_topology": "PX-7A2E8337",
+      "top20_topology_counts": {
+        "PX-7A2E8337": 20
+      },
+      "baseline_top10_retained_in_top20": 10,
+      "baseline_top10_median_rank": 5.5
+    },
+    "mobility_plus20": {
+      "functional_combinations": 168,
+      "winner": {
+        "candidate_id": "PX-7A2E8337+TM-BDA8A9EE",
+        "topology_id": "PX-7A2E8337",
+        "functional": true,
+        "score": 80.47302936193552,
+        "max_rcer_pct": 13.542844637018215,
+        "address_us": 9.15
+      },
+      "winner_topology": "PX-7A2E8337",
+      "top20_topology_counts": {
+        "PX-7A2E8337": 20
+      },
+      "baseline_top10_retained_in_top20": 0,
+      "baseline_top10_median_rank": 29.5
+    }
+  },
+  "all_scenarios_same_winner_topology": true,
+  "functional_in_all_scenarios": 120,
+  "robust_top10": [
+    {
+      "candidate_id": "PX-7A2E8337+TM-C6470215",
+      "topology_id": "PX-7A2E8337",
+      "mean_rank": 6.555555555555555,
+      "worst_rank": 25,
+      "best_rank": 1,
+      "baseline_score": 79.80688502494874,
+      "baseline_proxy_rcer_pct": 13.345967945772175,
+      "worst_proxy_rcer_pct": 14.570515514541185,
+      "address_us": 17.1
+    },
+    {
+      "candidate_id": "PX-7A2E8337+TM-25F81A19",
+      "topology_id": "PX-7A2E8337",
+      "mean_rank": 7.888888888888889,
+      "worst_rank": 26,
+      "best_rank": 2,
+      "baseline_score": 79.7981101553925,
+      "baseline_proxy_rcer_pct": 13.346826333582607,
+      "worst_proxy_rcer_pct": 14.571505911923968,
+      "address_us": 17.150000000000002
+    },
+    {
+      "candidate_id": "PX-7A2E8337+TM-D2B82E1A",
+      "topology_id": "PX-7A2E8337",
+      "mean_rank": 8.333333333333334,
+      "worst_rank": 27,
+      "best_rank": 2,
+      "baseline_score": 79.79551338462099,
+      "baseline_proxy_rcer_pct": 13.353288499953141,
+      "worst_proxy_rcer_pct": 14.580225276199831,
+      "address_us": 17.150000000000002
+    },
+    {
+      "candidate_id": "PX-7A2E8337+TM-D9325021",
+      "topology_id": "PX-7A2E8337",
+      "mean_rank": 9.666666666666666,
+      "worst_rank": 28,
+      "best_rank": 4,
+      "baseline_score": 79.78677515569095,
+      "baseline_proxy_rcer_pct": 13.354109366820987,
+      "worst_proxy_rcer_pct": 14.581176594448236,
+      "address_us": 17.200000000000003
+    },
+    {
+      "candidate_id": "PX-7A2E8337+TM-AB4A116E",
+      "topology_id": "PX-7A2E8337",
+      "mean_rank": 10.88888888888889,
+      "worst_rank": 29,
+      "best_rank": 5,
+      "baseline_score": 79.7258752172376,
+      "baseline_proxy_rcer_pct": 13.345967944955495,
+      "worst_proxy_rcer_pct": 14.570515511876481,
+      "address_us": 17.6
+    },
+    {
+      "candidate_id": "PX-7A2E8337+TM-CEB21E95",
+      "topology_id": "PX-7A2E8337",
+      "mean_rank": 12.333333333333334,
+      "worst_rank": 30,
+      "best_rank": 6,
+      "baseline_score": 79.7172015466793,
+      "baseline_proxy_rcer_pct": 13.346826332766968,
+      "worst_proxy_rcer_pct": 14.571505909258594,
+      "address_us": 17.650000000000002
+    },
+    {
+      "candidate_id": "PX-7A2E8337+TM-C3BA9D91",
+      "topology_id": "PX-7A2E8337",
+      "mean_rank": 12.666666666666666,
+      "worst_rank": 31,
+      "best_rank": 6,
+      "baseline_score": 79.7146047759089,
+      "baseline_proxy_rcer_pct": 13.353288499137323,
+      "worst_proxy_rcer_pct": 14.580225273535746,
+      "address_us": 17.650000000000002
+    },
+    {
+      "candidate_id": "PX-7A2E8337+TM-BDA8A9EE",
+      "topology_id": "PX-7A2E8337",
+      "mean_rank": 13.444444444444445,
+      "worst_rank": 25,
+      "best_rank": 1,
+      "baseline_score": 79.6258512684737,
+      "baseline_proxy_rcer_pct": 14.261896993966053,
+      "worst_proxy_rcer_pct": 15.450587433983836,
+      "address_us": 9.15
+    },
+    {
+      "candidate_id": "PX-7A2E8337+TM-63DEB74E",
+      "topology_id": "PX-7A2E8337",
+      "mean_rank": 14.0,
+      "worst_rank": 32,
+      "best_rank": 8,
+      "baseline_score": 79.70596761955926,
+      "baseline_proxy_rcer_pct": 13.35410936600221,
+      "worst_proxy_rcer_pct": 14.581176591784503,
+      "address_us": 17.700000000000003
+    },
+    {
+      "candidate_id": "PX-7A2E8337+TM-5B2918E6",
+      "topology_id": "PX-7A2E8337",
+      "mean_rank": 14.88888888888889,
+      "worst_rank": 26,
+      "best_rank": 2,
+      "baseline_score": 79.61473359150175,
+      "baseline_proxy_rcer_pct": 14.263577886373133,
+      "worst_proxy_rcer_pct": 15.4533147827142,
+      "address_us": 9.2
+    }
+  ]
+}

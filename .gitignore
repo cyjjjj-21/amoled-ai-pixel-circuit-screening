@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.delivery-cache-gate.json
+failure-screenshots/
+debug-screenshots/

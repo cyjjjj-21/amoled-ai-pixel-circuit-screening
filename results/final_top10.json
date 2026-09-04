@@ -1,0 +1,112 @@
+[
+  {
+    "candidate_id": "PX-7A2E8337+TM-C6470215",
+    "topology_id": "PX-7A2E8337",
+    "mean_rank": 6.555555555555555,
+    "worst_rank": 25,
+    "best_rank": 1,
+    "baseline_score": 79.80688502494874,
+    "baseline_proxy_rcer_pct": 13.345967945772175,
+    "worst_proxy_rcer_pct": 14.570515514541185,
+    "address_us": 17.1
+  },
+  {
+    "candidate_id": "PX-7A2E8337+TM-25F81A19",
+    "topology_id": "PX-7A2E8337",
+    "mean_rank": 7.888888888888889,
+    "worst_rank": 26,
+    "best_rank": 2,
+    "baseline_score": 79.7981101553925,
+    "baseline_proxy_rcer_pct": 13.346826333582607,
+    "worst_proxy_rcer_pct": 14.571505911923968,
+    "address_us": 17.150000000000002
+  },
+  {
+    "candidate_id": "PX-7A2E8337+TM-D2B82E1A",
+    "topology_id": "PX-7A2E8337",
+    "mean_rank": 8.333333333333334,
+    "worst_rank": 27,
+    "best_rank": 2,
+    "baseline_score": 79.79551338462099,
+    "baseline_proxy_rcer_pct": 13.353288499953141,
+    "worst_proxy_rcer_pct": 14.580225276199831,
+    "address_us": 17.150000000000002
+  },
+  {
+    "candidate_id": "PX-7A2E8337+TM-D9325021",
+    "topology_id": "PX-7A2E8337",
+    "mean_rank": 9.666666666666666,
+    "worst_rank": 28,
+    "best_rank": 4,
+    "baseline_score": 79.78677515569095,
+    "baseline_proxy_rcer_pct": 13.354109366820987,
+    "worst_proxy_rcer_pct": 14.581176594448236,
+    "address_us": 17.200000000000003
+  },
+  {
+    "candidate_id": "PX-7A2E8337+TM-AB4A116E",
+    "topology_id": "PX-7A2E8337",
+    "mean_rank": 10.88888888888889,
+    "worst_rank": 29,
+    "best_rank": 5,
+    "baseline_score": 79.7258752172376,
+    "baseline_proxy_rcer_pct": 13.345967944955495,
+    "worst_proxy_rcer_pct": 14.570515511876481,
+    "address_us": 17.6
+  },
+  {
+    "candidate_id": "PX-7A2E8337+TM-CEB21E95",
+    "topology_id": "PX-7A2E8337",
+    "mean_rank": 12.333333333333334,
+    "worst_rank": 30,
+    "best_rank": 6,
+    "baseline_score": 79.7172015466793,
+    "baseline_proxy_rcer_pct": 13.346826332766968,
+    "worst_proxy_rcer_pct": 14.571505909258594,
+    "address_us": 17.650000000000002
+  },
+  {
+    "candidate_id": "PX-7A2E8337+TM-C3BA9D91",
+    "topology_id": "PX-7A2E8337",
+    "mean_rank": 12.666666666666666,
+    "worst_rank": 31,
+    "best_rank": 6,
+    "baseline_score": 79.7146047759089,
+    "baseline_proxy_rcer_pct": 13.353288499137323,
+    "worst_proxy_rcer_pct": 14.580225273535746,
+    "address_us": 17.650000000000002
+  },
+  {
+    "candidate_id": "PX-7A2E8337+TM-BDA8A9EE",
+    "topology_id": "PX-7A2E8337",
+    "mean_rank": 13.444444444444445,
+    "worst_rank": 25,
+    "best_rank": 1,
+    "baseline_score": 79.6258512684737,
+    "baseline_proxy_rcer_pct": 14.261896993966053,
+    "worst_proxy_rcer_pct": 15.450587433983836,
+    "address_us": 9.15
+  },
+  {
+    "candidate_id": "PX-7A2E8337+TM-63DEB74E",
+    "topology_id": "PX-7A2E8337",
+    "mean_rank": 14.0,
+    "worst_rank": 32,
+    "best_rank": 8,
+    "baseline_score": 79.70596761955926,
+    "baseline_proxy_rcer_pct": 13.35410936600221,
+    "worst_proxy_rcer_pct": 14.581176591784503,
+    "address_us": 17.700000000000003
+  },
+  {
+    "candidate_id": "PX-7A2E8337+TM-5B2918E6",
+    "topology_id": "PX-7A2E8337",
+    "mean_rank": 14.88888888888889,
+    "worst_rank": 26,
+    "best_rank": 2,
+    "baseline_score": 79.61473359150175,
+    "baseline_proxy_rcer_pct": 14.263577886373133,
+    "worst_proxy_rcer_pct": 15.4533147827142,
+    "address_us": 9.2
+  }
+]
