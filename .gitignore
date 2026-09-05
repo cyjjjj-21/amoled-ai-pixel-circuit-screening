@@ -1,6 +1,8 @@
 .DS_Store
+.venv/
 __pycache__/
 *.py[cod]
 .delivery-cache-gate.json
 failure-screenshots/
 debug-screenshots/
+results_v3/spice/trace_full.txt

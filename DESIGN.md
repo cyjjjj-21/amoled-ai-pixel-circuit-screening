@@ -1,23 +1,34 @@
-# Design intent
+# V3 方法与复现约定
 
-## Audience
+## 用户约束与计算域分离
 
-AMOLED pixel-circuit and oxide-TFT engineers reviewing a pre-SPICE candidate screen.
+1. DTFT 为 IGZO TFT；最多 2 个功能电容、5 组物理 GOA 控制波形；STFT 可用 LTPS 或 IGZO。
+2. DATA 变化写入 VGS 时有压缩：仅检验非零且绝对值小于 1 的增益，不指定压缩目标。
+3. 阈值补偿与 DATA 写入分离，并检验跨阶段阈值保留；不能只检查局部写入公式。
+4. 写入后优先改善源极扰动下的 VGS 稳定性；报告连续指标，不擅自设置通过阈值。
 
-## Visual system
+有限搜索选用 G/S/X 三个内部节点、R 参考端、源随器补偿骨架和 RESET/COMP/PREP/WRITE/EMIT 阶段。它们是计算语法，不是用户额外约束。无法据此证明任意器件数、节点数和时序的全拓扑完备性。
 
-- Restrained technical-report layout with neutral surfaces and one low-saturation blue accent.
-- Tables are the primary evidence surface because exact candidate lookup matters more than a
-  chart for ten closely clustered composite scores.
-- Chinese prose uses the report renderer's system sans family; variables and node names remain
-  in monospace or math-like Latin text.
-- No decorative gradients, illustrations, or marketing-style cards.
+## 生成、筛选与排序
 
-## Content hierarchy
+六条候选电容边选一或二：21 种。结合 3 种 X 锚点、2 种 PREP 锚点状态、3 种 DATA 接入端、2 种发光锚点状态、2 种源极开关拆分、2 种漏极隔离，生成 3,024 项。
 
-1. Decision and qualification boundary.
-2. Search-space counts and Top-10 combinations.
-3. Exact topology/netlist and timing masks.
-4. Model, filters, robustness, and failure modes.
-5. PDK handoff actions.
+顺序淘汰：控制组超限、DATA/VINIT 短路、发光阶段无内在压缩、仅在写入后才压缩、阈值跨阶段丢失。每项保留唯一首次拒绝原因；5 种结构实现通过理想机制检查。理想充分补偿是结构审计的有利假设，不代表有限时间已建立。
 
+每只电容采样 20/40/80/160/320/640 fF，得到 5×36=180 点。寄生场景 CG=3 fF、CX=2 fF、CS=20 fF。按源极敏感度、阈值残差、总电容、晶体管数、控制组数排序；前两项先舍入到 10 位小数以免数值噪声打破物理等价。Top 10 按电容对去重，不用同等效结构重复占位。
+
+两种 6T2C 实现各展开 36 电容对、32 种五角色开关工艺分配、24 组时长，得到 55,296 个降阶组合。7T 变体只做结构/参数检查，不宣称完成动态验证。各参数点参考时序按写入误差绝对值、保持漂移、EM 压降、寻址总时间依次选取；这是展示优先序，不是用户指定的综合评分。
+
+## 三层证据
+
+- `screen_v3.py`：KKT 约束下的多节点电荷守恒；常量、VTH、DATA 三列分别传播；全阶段复核。另用闭式式子作单元测试。
+- 降阶动态：平方律源随器补偿解析解、写入/重定位 RC、两节点漏电矩阵指数。`proxy_models.py` 明示未校准 Ron/Goff，不暗示 LTPS/IGZO 的普适参数。
+- `validate_v3_spice.py`：Top 10 × 3 个 VTH × 3 个 β，共 90 次 ngspice 瞬态；网表、日志、测量可逐项追溯。OLED 阳极由指定电压源扰动，不能用于真实 OLED 电流结论；这些不是工艺 PVT 角。
+
+Top 10 没有按 SPICE 结果重新优化，报告并列展示低 β 下的有限补偿残差。电容边界放大实验进一步检查排名是否依赖人为计算上界。
+
+## 验证与交接
+
+`python3 run_all.py` 是完整可重复入口，`python3 screen.py` 仅运行筛选。7 项单元测试覆盖旧 V2 反例、源极锚定阈值保持、寄生闭式解、浮置电荷守恒、1C 搜索、物理控制波形计数，以及实数 RC 衰减的方程一致性/无源性。`tools/check_results_v3.py` 逐表检查计数、数值有限性、候选/时序对应、SPICE 日志与测量一致及报告链接。图由结果生成脚本维护；波形图只能来自求解器数据，不手绘轨迹。
+
+交接包含全量失败候选、通过结构 JSON、参数/时长/工艺组合、Top 10、90 组网表与日志、阶段电荷轨迹、边界实验和完整报告。需要实际 PDK、面积/行时间、DATA 或电流范围、压缩目标及可接受误差后，才能继续工艺级性能和综合最优判断。

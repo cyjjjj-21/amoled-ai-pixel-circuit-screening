@@ -1,0 +1,102 @@
+[
+  {
+    "rank": 1,
+    "caps": "640/20",
+    "kappa": 0.030165912518853692,
+    "nominal_overdrive_mv": 59.772,
+    "target_overdrive_mv": 45.24886877828053,
+    "max_overdrive_error_mv": 111.46213122171946,
+    "worst_source_pct": 0.7480149602992213,
+    "worst_hold_mv": 1.3199999999999878
+  },
+  {
+    "rank": 2,
+    "caps": "640/40",
+    "kappa": 0.0585651537335285,
+    "nominal_overdrive_mv": 100.696,
+    "target_overdrive_mv": 87.84773060029275,
+    "max_overdrive_error_mv": 112.35726939970725,
+    "worst_source_pct": 0.7606304252170087,
+    "worst_hold_mv": 1.4499999999999513
+  },
+  {
+    "rank": 3,
+    "caps": "640/80",
+    "kappa": 0.11065006915629345,
+    "nominal_overdrive_mv": 163.61999999999998,
+    "target_overdrive_mv": 165.97510373444018,
+    "max_overdrive_error_mv": 102.5198962655598,
+    "worst_source_pct": 0.7682612088110089,
+    "worst_hold_mv": 1.4399999999998858
+  },
+  {
+    "rank": 4,
+    "caps": "640/160",
+    "kappa": 0.19925280199252804,
+    "nominal_overdrive_mv": 233.96,
+    "target_overdrive_mv": 298.87920298879203,
+    "max_overdrive_error_mv": 83.75020298879207,
+    "worst_source_pct": 0.772370737954213,
+    "worst_hold_mv": 1.2600000000000389
+  },
+  {
+    "rank": 5,
+    "caps": "640/320",
+    "kappa": 0.3322949117341641,
+    "nominal_overdrive_mv": 486.648,
+    "target_overdrive_mv": 498.44236760124613,
+    "max_overdrive_error_mv": 126.76763239875388,
+    "worst_source_pct": 0.7747747747747382,
+    "worst_hold_mv": 1.7599999999999838
+  },
+  {
+    "rank": 6,
+    "caps": "640/640",
+    "kappa": 0.4988308651597817,
+    "nominal_overdrive_mv": 663.543,
+    "target_overdrive_mv": 748.2462977396725,
+    "max_overdrive_error_mv": 175.38429773967258,
+    "worst_source_pct": 0.7761241798688002,
+    "worst_hold_mv": 1.7499999999999183
+  },
+  {
+    "rank": 7,
+    "caps": "320/20",
+    "kappa": 0.05830903790087471,
+    "nominal_overdrive_mv": 100.309,
+    "target_overdrive_mv": 87.46355685131206,
+    "max_overdrive_error_mv": 71.41844314868794,
+    "worst_source_pct": 1.484059362374491,
+    "worst_hold_mv": 2.5999999999999357
+  },
+  {
+    "rank": 8,
+    "caps": "320/40",
+    "kappa": 0.1101928374655646,
+    "nominal_overdrive_mv": 174.537,
+    "target_overdrive_mv": 165.2892561983469,
+    "max_overdrive_error_mv": 70.3047438016531,
+    "worst_source_pct": 1.5099999999999891,
+    "worst_hold_mv": 2.890000000000059
+  },
+  {
+    "rank": 9,
+    "caps": "320/80",
+    "kappa": 0.19851116625310192,
+    "nominal_overdrive_mv": 283.913,
+    "target_overdrive_mv": 297.7667493796529,
+    "max_overdrive_error_mv": 52.84125062034711,
+    "worst_source_pct": 1.5241829019482256,
+    "worst_hold_mv": 2.9599999999998516
+  },
+  {
+    "rank": 10,
+    "caps": "320/160",
+    "kappa": 0.33126293995859235,
+    "nominal_overdrive_mv": 424.42999999999995,
+    "target_overdrive_mv": 496.89440993788855,
+    "max_overdrive_error_mv": 191.6605900621115,
+    "worst_source_pct": 1.5323064612922586,
+    "worst_hold_mv": 2.9599999999998516
+  }
+]

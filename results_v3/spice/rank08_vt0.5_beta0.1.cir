@@ -1,0 +1,43 @@
+V3 source-disturbance bench P3-24654949ad VTH=0.5 beta=0.1
+* Uncalibrated behavioral proxy; source voltage is prescribed, not an OLED model.
+.option reltol=1e-6 abstol=1e-16 vntol=1e-9 method=gear
+VVDD VDD 0 8
+VREF VREF 0 3
+VINIT VINIT 0 0
+VDATA VDATA 0 1.5
+VOA OLED_A 0 PWL(0 1 138.81u 1 138.83u 1.5 16808.8u 1.5)
+.param vt=0.5 beta=0.1u
+BDRT VDD S I={beta*(max(V(G,S)-vt,0)*min(max(V(VDD,S),0),max(V(G,S)-vt,0))-0.5*min(max(V(VDD,S),0),max(V(G,S)-vt,0))^2)}
+CST G S 320f
+CDATA G X 40f
+CPG G 0 3f
+CPS S 0 20f
+CPX X 0 2f
+SGREF G VREF GC 0 MOD_GREF
+.model MOD_GREF SW(Ron=150000.0 Roff=50000000000000.0 Vt=2 Vh=0)
+SXANCHOR X S XC 0 MOD_XANCHOR
+.model MOD_XANCHOR SW(Ron=150000.0 Roff=50000000000000.0 Vt=2 Vh=0)
+SDATA X VDATA DC 0 MOD_DATA
+.model MOD_DATA SW(Ron=150000.0 Roff=50000000000000.0 Vt=2 Vh=0)
+SSCLAMP S VINIT SC 0 MOD_SCLAMP
+.model MOD_SCLAMP SW(Ron=150000.0 Roff=50000000000000.0 Vt=2 Vh=0)
+SEM S OLED_A EC 0 MOD_EM
+.model MOD_EM SW(Ron=30000.0 Roff=500000000000.0 Vt=2 Vh=0)
+VGC GC 0 PWL(0u 4 128.5u 4 128.502u 0 16808.81u 0)
+VXC XC 0 PWL(0u 4 128.5u 4 128.502u 0 16808.81u 0)
+VSC SC 0 PWL(0u 4 0.495u 4 0.497u 0 128.52u 0 128.522u 4 128.805u 4 128.807u 0 16808.81u 0)
+VDC DC 0 PWL(0u 0 128.74u 0 128.742u 4 128.79u 4 128.792u 0 16808.81u 0)
+VEC EC 0 PWL(0u 0 128.81u 0 128.812u 4 16808.805u 4 16808.807u 0 16808.81u 0)
+BVGS VGS 0 V=V(G)-V(S)
+BU U 0 V=V(G)-V(S)-vt
+.tran .1u 16808.8u 0 .2u
+.meas tran vgs_comp FIND V(VGS) AT=128.49u
+.meas tran vgs_write FIND V(VGS) AT=128.787u
+.meas tran vgs_early FIND V(VGS) AT=133.81u
+.meas tran vgs_before FIND V(VGS) AT=137.81u
+.meas tran vgs_after FIND V(VGS) AT=139.81u
+.meas tran source_before FIND V(S) AT=137.81u
+.meas tran source_after FIND V(S) AT=139.81u
+.meas tran vgs_end FIND V(VGS) AT=16788.8u
+.meas tran overdrive FIND V(U) AT=133.81u
+.end

@@ -1,0 +1,67 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: v3 source-disturbance bench p3-685a0471fd vth=0.5 beta=1.0
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                          8
+vref                                         3
+vinit                                        0
+vdata                                      1.5
+oled_a                                       1
+s                                     0.347496
+g                                            3
+x                                     0.347496
+gc                                           4
+xc                                           4
+dc                                           0
+sc                                           4
+ec                                           0
+vgs                                     2.6525
+u                                       2.1525
+bu#branch                                    0
+bvgs#branch                                  0
+vec#branch                                   0
+vdc#branch                                   0
+vsc#branch                                   0
+vxc#branch                                   0
+vgc#branch                                   0
+voa#branch                        -1.30501e-12
+vdata#branch                      -2.30501e-14
+vinit#branch                       2.31664e-06
+vref#branch                       -1.26653e-21
+vvdd#branch                       -2.31664e-06
+
+ Reference value :  1.23190e-02
+No. of Data Rows : 84157
+
+  Measurements for Transient Analysis
+
+vgs_comp            =  5.31001e-01
+vgs_write           =  9.24319e-01
+vgs_early           =  9.24430e-01
+vgs_before          =  9.24430e-01
+vgs_after           =  9.16777e-01
+source_before       =  1.00270e+00
+source_after        =  1.50261e+00
+vgs_end             =  9.15056e-01
+overdrive           =  4.24430e-01
+
+
+Total analysis time (seconds) = 0.325107
+
+Total elapsed time (seconds) = 0.328
+
+Total DRAM available = 16384.000 MB.
+DRAM currently available =  108.422 MB.
+Maximum ngspice program size =   13.906 MB.
+Current ngspice program size =   13.906 MB.

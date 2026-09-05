@@ -1,0 +1,19 @@
+{
+  "completed": 90,
+  "PDK_runs": 0,
+  "simulator": "ngspice",
+  "model": "uncalibrated square-law DTFT; resistive SWT; forced OLED anode",
+  "vth_scenarios": [
+    -0.5,
+    0.5,
+    1.5
+  ],
+  "beta_uav2_scenarios": [
+    0.1,
+    1,
+    10
+  ],
+  "source_step_v": 0.5,
+  "hold_ms": 16.66,
+  "top10_reoptimized_after_spice": false
+}

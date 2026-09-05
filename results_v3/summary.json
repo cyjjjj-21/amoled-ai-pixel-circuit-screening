@@ -1,0 +1,335 @@
+{
+  "version": 3,
+  "user_constraints": [
+    "DTFT 为 IGZO TFT；电容最多 2 个；GOA 控制信号最多 5 组；STFT 可用 LTPS 或 IGZO",
+    "DATA 电压变化写入 DTFT Vgs 时有压缩比",
+    "阈值电压补偿与 DATA 写入分离",
+    "DATA 写入后 Vgs 保持相对稳定；源极变化时优先使 Vgs 稳定性最好"
+  ],
+  "model": "ideal affine charge conservation plus explicit parasitic scenarios",
+  "structural_candidates": 3024,
+  "decisions": {
+    "no_intrinsic_DATA_compression": 1016,
+    "control_groups_gt_5": 1323,
+    "DATA_and_VINIT_short_in_WRITE": 567,
+    "compression_only_after_WRITE": 80,
+    "VTH_lost_across_phases": 33,
+    "ideal_mechanism_pass": 5
+  },
+  "surviving_structures": 5,
+  "parameter_candidates": 180,
+  "timing_candidates": 24,
+  "top10": [
+    {
+      "candidate_id": "P3-196fd81247",
+      "structure_id": "S3-fd65244088",
+      "c1_ff": 640.0,
+      "c2_ff": 20.0,
+      "kappa": 0.030165912518853692,
+      "abs_vth_residual": 0.004524886877830259,
+      "source_sensitivity": 0.0074721556464127925,
+      "ideal_vth_residual": -7.771561172376096e-16,
+      "total_cap_ff": 660.0,
+      "transistors": 6,
+      "control_groups": 4,
+      "isolate_drain": false,
+      "track_prep": false,
+      "pareto": true,
+      "reference_timing": "T3-19",
+      "reference_mix": "IGZO/IGZO/IGZO/IGZO/LTPS",
+      "program_error_mv": 12.129420659406101,
+      "hold_delta_vgs_mv": -1.2729851575223883
+    },
+    {
+      "candidate_id": "P3-09ab49edb4",
+      "structure_id": "S3-fd65244088",
+      "c1_ff": 640.0,
+      "c2_ff": 40.0,
+      "kappa": 0.0585651537335285,
+      "abs_vth_residual": 0.004392386530015169,
+      "source_sensitivity": 0.007605405006276378,
+      "ideal_vth_residual": -6.661338147750939e-16,
+      "total_cap_ff": 680.0,
+      "transistors": 6,
+      "control_groups": 4,
+      "isolate_drain": false,
+      "track_prep": false,
+      "pareto": true,
+      "reference_timing": "T3-19",
+      "reference_mix": "IGZO/IGZO/IGZO/IGZO/LTPS",
+      "program_error_mv": 12.020724089958328,
+      "hold_delta_vgs_mv": -1.4332820812801295
+    },
+    {
+      "candidate_id": "P3-9d6921b59c",
+      "structure_id": "S3-fd65244088",
+      "c1_ff": 640.0,
+      "c2_ff": 80.0,
+      "kappa": 0.11065006915629345,
+      "abs_vth_residual": 0.004149377593361425,
+      "source_sensitivity": 0.0076768899141552716,
+      "ideal_vth_residual": 0.0,
+      "total_cap_ff": 720.0,
+      "transistors": 6,
+      "control_groups": 4,
+      "isolate_drain": false,
+      "track_prep": false,
+      "pareto": true,
+      "reference_timing": "T3-19",
+      "reference_mix": "IGZO/IGZO/IGZO/IGZO/LTPS",
+      "program_error_mv": 10.359257587653603,
+      "hold_delta_vgs_mv": -1.534061024345057
+    },
+    {
+      "candidate_id": "P3-3d8eed56d6",
+      "structure_id": "S3-fd65244088",
+      "c1_ff": 640.0,
+      "c2_ff": 160.0,
+      "kappa": 0.19925280199252804,
+      "abs_vth_residual": 0.0037359900373598043,
+      "source_sensitivity": 0.007713952108415079,
+      "ideal_vth_residual": -5.551115123125783e-16,
+      "total_cap_ff": 800.0,
+      "transistors": 6,
+      "control_groups": 4,
+      "isolate_drain": false,
+      "track_prep": false,
+      "pareto": true,
+      "reference_timing": "T3-19",
+      "reference_mix": "IGZO/IGZO/IGZO/IGZO/LTPS",
+      "program_error_mv": -10.592311732704196,
+      "hold_delta_vgs_mv": -1.530286911196832
+    },
+    {
+      "candidate_id": "P3-0424d5b3c3",
+      "structure_id": "S3-fd65244088",
+      "c1_ff": 640.0,
+      "c2_ff": 320.0,
+      "kappa": 0.3322949117341641,
+      "abs_vth_residual": 0.0031152647975082326,
+      "source_sensitivity": 0.007732827441426338,
+      "ideal_vth_residual": -1.1102230246251565e-16,
+      "total_cap_ff": 960.0,
+      "transistors": 6,
+      "control_groups": 4,
+      "isolate_drain": false,
+      "track_prep": false,
+      "pareto": true,
+      "reference_timing": "T3-21",
+      "reference_mix": "IGZO/IGZO/IGZO/IGZO/LTPS",
+      "program_error_mv": 12.64769224227802,
+      "hold_delta_vgs_mv": -1.7807791275217255
+    },
+    {
+      "candidate_id": "P3-7ecd5f7d99",
+      "structure_id": "S3-fd65244088",
+      "c1_ff": 640.0,
+      "c2_ff": 640.0,
+      "kappa": 0.4988308651597817,
+      "abs_vth_residual": 0.002338269680436156,
+      "source_sensitivity": 0.0077423530377751515,
+      "ideal_vth_residual": 2.220446049250313e-16,
+      "total_cap_ff": 1280.0,
+      "transistors": 6,
+      "control_groups": 4,
+      "isolate_drain": false,
+      "track_prep": false,
+      "pareto": true,
+      "reference_timing": "T3-21",
+      "reference_mix": "IGZO/IGZO/IGZO/IGZO/LTPS",
+      "program_error_mv": 5.006316098725594,
+      "hold_delta_vgs_mv": -1.8947399299569234
+    },
+    {
+      "candidate_id": "P3-84fe3862bf",
+      "structure_id": "S3-fd65244088",
+      "c1_ff": 320.0,
+      "c2_ff": 20.0,
+      "kappa": 0.05830903790087471,
+      "abs_vth_residual": 0.008746355685131157,
+      "source_sensitivity": 0.014833473271760766,
+      "ideal_vth_residual": -6.661338147750939e-16,
+      "total_cap_ff": 340.0,
+      "transistors": 6,
+      "control_groups": 4,
+      "isolate_drain": false,
+      "track_prep": false,
+      "pareto": true,
+      "reference_timing": "T3-19",
+      "reference_mix": "IGZO/IGZO/IGZO/IGZO/LTPS",
+      "program_error_mv": 8.250194725699615,
+      "hold_delta_vgs_mv": -2.5523854134199553
+    },
+    {
+      "candidate_id": "P3-24654949ad",
+      "structure_id": "S3-fd65244088",
+      "c1_ff": 320.0,
+      "c2_ff": 40.0,
+      "kappa": 0.1101928374655646,
+      "abs_vth_residual": 0.00826446280991755,
+      "source_sensitivity": 0.015095998827494905,
+      "ideal_vth_residual": 0.0,
+      "total_cap_ff": 360.0,
+      "transistors": 6,
+      "control_groups": 4,
+      "isolate_drain": false,
+      "track_prep": false,
+      "pareto": true,
+      "reference_timing": "T3-19",
+      "reference_mix": "IGZO/IGZO/IGZO/IGZO/LTPS",
+      "program_error_mv": 7.311436663295479,
+      "hold_delta_vgs_mv": -2.9038319707912486
+    },
+    {
+      "candidate_id": "P3-306acce247",
+      "structure_id": "S3-fd65244088",
+      "c1_ff": 320.0,
+      "c2_ff": 80.0,
+      "kappa": 0.19851116625310192,
+      "abs_vth_residual": 0.007444168734490386,
+      "source_sensitivity": 0.015236808526607692,
+      "ideal_vth_residual": -5.551115123125783e-16,
+      "total_cap_ff": 400.0,
+      "transistors": 6,
+      "control_groups": 4,
+      "isolate_drain": false,
+      "track_prep": false,
+      "pareto": true,
+      "reference_timing": "T3-19",
+      "reference_mix": "IGZO/IGZO/IGZO/IGZO/LTPS",
+      "program_error_mv": 4.2497314165074185,
+      "hold_delta_vgs_mv": -3.1685814985227267
+    },
+    {
+      "candidate_id": "P3-685a0471fd",
+      "structure_id": "S3-fd65244088",
+      "c1_ff": 320.0,
+      "c2_ff": 160.0,
+      "kappa": 0.33126293995859235,
+      "abs_vth_residual": 0.006211180124224169,
+      "source_sensitivity": 0.015309805113399522,
+      "ideal_vth_residual": -1.1102230246251565e-16,
+      "total_cap_ff": 480.0,
+      "transistors": 6,
+      "control_groups": 4,
+      "isolate_drain": false,
+      "track_prep": false,
+      "pareto": true,
+      "reference_timing": "T3-13",
+      "reference_mix": "IGZO/IGZO/IGZO/IGZO/LTPS",
+      "program_error_mv": 4.470002302403742,
+      "hold_delta_vgs_mv": -3.3293917446846066
+    }
+  ],
+  "dynamic_combinations": 55296,
+  "old_v2_ideal_transfer": {
+    "kappa": 0.33333333333333304,
+    "write_kappa": 0.33333333333333304,
+    "vth_residual": -0.33333333333333215,
+    "source_sensitivity": 7.771561172376096e-16,
+    "offset_v": -1.1102230246251565e-16,
+    "stages": {
+      "COMP": [
+        [
+          3.000000000000003,
+          -2.170289094866136e-18,
+          0.0
+        ],
+        [
+          3.0000000000000067,
+          -1.0000000000000007,
+          0.0
+        ],
+        [
+          2.9999999999999916,
+          1.3287783049003195e-15,
+          0.0
+        ]
+      ],
+      "PREP": [
+        [
+          -5.329070518200751e-15,
+          1.0000000000000009,
+          0.0
+        ],
+        [
+          4.440892098500626e-16,
+          -4.440892098500626e-16,
+          0.0
+        ],
+        [
+          -1.3766765505351941e-14,
+          1.0000000000000016,
+          0.0
+        ]
+      ],
+      "WRITE": [
+        [
+          -1.0362081563168162e-15,
+          0.6666666666666677,
+          0.33333333333333315
+        ],
+        [
+          2.267975102510409e-30,
+          -1.1372277616651692e-16,
+          8.431718795753925e-17
+        ],
+        [
+          -6.310887241768095e-30,
+          2.220446049250313e-16,
+          0.9999999999999998
+        ]
+      ],
+      "EMIT": [
+        [
+          0.9999999999999992,
+          0.6666666666666679,
+          0.33333333333333304
+        ],
+        [
+          0.9999999999999993,
+          -2.465190328815662e-32,
+          0.0
+        ],
+        [
+          0.9999999999999991,
+          3.357673810915482e-16,
+          0.9999999999999997
+        ]
+      ]
+    }
+  },
+  "boundary_extension": [
+    {
+      "scale": 1.0,
+      "total_cap_ff": 660.0,
+      "kappa": 0.030165912518853692,
+      "vth_residual": -0.004524886877830259,
+      "source_sensitivity": -0.0074721556464127925
+    },
+    {
+      "scale": 2.0,
+      "total_cap_ff": 1320.0,
+      "kappa": 0.030234315948601556,
+      "vth_residual": -0.0022675736961452753,
+      "source_sensitivity": -0.00381721824852721
+    },
+    {
+      "scale": 4.0,
+      "total_cap_ff": 2640.0,
+      "kappa": 0.030268634127884952,
+      "vth_residual": -0.0011350737797966026,
+      "source_sensitivity": -0.001930336715385117
+    },
+    {
+      "scale": 8.0,
+      "total_cap_ff": 5280.0,
+      "kappa": 0.030285822449365892,
+      "vth_residual": -0.0005678591709254999,
+      "source_sensitivity": -0.0009707966072706187
+    }
+  ],
+  "global_optimum_certified": false,
+  "PDK_simulations": 0,
+  "finite_scope": "G,S,X internal nodes; source-follower COMP; DATA writing with S clamped; 1/2 intentional capacitors on 6 edges; optional drain isolation; 5 stage order"
+}

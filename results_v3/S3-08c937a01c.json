@@ -1,0 +1,63 @@
+{
+  "caps": [
+    [
+      "G",
+      "S"
+    ],
+    [
+      "G",
+      "X"
+    ]
+  ],
+  "anchor": "S",
+  "track_prep": false,
+  "data_node": "X",
+  "anchor_emit": false,
+  "split_source": true,
+  "isolate_drain": false,
+  "switches": [
+    [
+      "GREF",
+      "G",
+      "VREF",
+      "11000",
+      "n"
+    ],
+    [
+      "XANCHOR",
+      "X",
+      "S",
+      "11000",
+      "n"
+    ],
+    [
+      "DATA",
+      "X",
+      "VDATA",
+      "00010",
+      "n"
+    ],
+    [
+      "EM",
+      "S",
+      "OLED_A",
+      "00001",
+      "n"
+    ],
+    [
+      "SRESET",
+      "S",
+      "VINIT",
+      "10000",
+      "n"
+    ],
+    [
+      "SHOLD",
+      "S",
+      "VINIT",
+      "00110",
+      "n"
+    ]
+  ],
+  "groups": 5
+}
